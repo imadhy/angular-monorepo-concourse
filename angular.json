@@ -20,7 +20,7 @@
             "main": "apps/pn106/src/main.ts",
             "polyfills": "apps/pn106/src/polyfills.ts",
             "tsConfig": "apps/pn106/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["apps/pn106/src/favicon.ico", "apps/pn106/src/assets"],
             "styles": ["apps/pn106/src/styles.scss"],
             "scripts": []

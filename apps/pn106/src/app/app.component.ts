@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Todo } from '@monorepo-project/data';
 
 @Component({
   selector: 'monorepo-project-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pn106';
+  todos: Todo[] = [{ title: 'Todo1' }, { title: 'Todo 2' }];
+
+  addTodo() {
+    this.todos.push({
+      title: `New todo ${Math.floor(Math.random() * 1000)}`
+    });
+  }
 }

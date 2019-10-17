@@ -10,4 +10,5 @@ jobs:
       - get: angular-monorepo-concourse
         trigger: true
       - task: test
+        params: { NG_CLI_ANALYTICS: 'ci' }
         file: angular-monorepo-concourse/ci/test.yml

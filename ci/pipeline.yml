@@ -9,5 +9,5 @@ jobs:
     plan:
       - get: angular-monorepo-concourse
         trigger: true
-      # - task: test
-      #   file: angular-monorepo-concourse/ci/test.yml
+      - task: test
+        file: angular-monorepo-concourse/ci/test.yml

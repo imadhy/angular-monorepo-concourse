@@ -21,8 +21,13 @@
             "polyfills": "apps/pn106/src/polyfills.ts",
             "tsConfig": "apps/pn106/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/pn106/src/favicon.ico", "apps/pn106/src/assets"],
-            "styles": ["apps/pn106/src/styles.scss"],
+            "assets": [
+              "apps/pn106/src/favicon.ico",
+              "apps/pn106/src/assets"
+            ],
+            "styles": [
+              "apps/pn106/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -81,7 +86,10 @@
               "apps/pn106/tsconfig.app.json",
               "apps/pn106/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/pn106/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/pn106/**"
+            ]
           }
         },
         "test": {
@@ -115,8 +123,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/pn106-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/pn106-e2e/**"]
+            "tsConfig": [
+              "apps/pn106-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/pn106-e2e/**"
+            ]
           }
         }
       }
@@ -134,7 +147,10 @@
               "libs/data/tsconfig.lib.json",
               "libs/data/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/data/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/data/**"
+            ]
           }
         },
         "test": {
@@ -159,7 +175,10 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui/**"
+            ]
           }
         },
         "test": {
@@ -179,7 +198,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "e1ec791e-e773-43de-a0ba-9c71d18716de"
   },
   "schematics": {
     "@nrwl/angular:application": {

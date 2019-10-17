@@ -1,0 +1,13 @@
+---
+resources:
+  - name: angular-monorepo-concourse
+    type: git
+    source: { uri: 'https://github.com/imadhy/angular-monorepo-concourse.git' }
+
+jobs:
+  - name: unit-test
+    plan:
+      - get: angular-monorepo-concourse
+        trigger: true
+      # - task: test
+      #   file: angular-monorepo-concourse/ci/test.yml

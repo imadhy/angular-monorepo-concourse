@@ -1,0 +1,15 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: { repository: teracy/angular-cli, tag: '8.2.2' }
+
+inputs:
+  - name: angular-monorepo-concourse
+
+caches:
+  - path: gopath/
+
+run:
+  path: angular-monorepo-concourse/ci/test.sh

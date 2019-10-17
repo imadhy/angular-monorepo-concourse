@@ -11,4 +11,5 @@ inputs:
   - name: angular-monorepo-concourse
 
 run:
-  path: angular-monorepo-concourse/ci/test.sh
+  path: /bin/sh
+  args: ['angular-monorepo-concourse/ci/test.sh']

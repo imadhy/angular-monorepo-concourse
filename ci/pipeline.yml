@@ -10,7 +10,6 @@ jobs:
       - get: mars-monorepo
         trigger: true
       - task: test
-        params: { NG_CLI_ANALYTICS: 'ci' }
         file: angular-monorepo-concourse/ci/test.yml
   - name: build-pn106
     plan:

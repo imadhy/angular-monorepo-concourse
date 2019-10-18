@@ -13,4 +13,4 @@ outputs:
 
 run:
   path: /bin/sh
-  args: ['angular-monorepo-concourse/ci/build_pn107.sh']
+  args: ['mars-monorepo/ci/build_pn107.sh']

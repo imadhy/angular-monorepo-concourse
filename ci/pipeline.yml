@@ -10,18 +10,18 @@ jobs:
       - get: mars-monorepo
         trigger: true
       - task: test
-        file: angular-monorepo-concourse/ci/test.yml
+        file: mars-monorepo/ci/test.yml
   - name: build-pn106
     plan:
       - get: mars-monorepo
         trigger: true
         passed: [unit-test]
       - task: run build
-        file: angular-monorepo-concourse/ci/build_106.yml
+        file: mars-monorepo/ci/build_106.yml
   - name: build-pn107
     plan:
       - get: mars-monorepo
         trigger: true
         passed: [unit-test]
       - task: run build
-        file: angular-monorepo-concourse/ci/build_107.yml
+        file: mars-monorepo/ci/build_107.yml

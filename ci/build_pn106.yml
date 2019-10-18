@@ -1,0 +1,16 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source: { repository: node, tag: '10' }
+
+inputs:
+  - name: mars-monorepo
+
+outputs:
+  - name: livrable_pn106
+
+run:
+  path: /bin/sh
+  args: ['angular-monorepo-concourse/ci/build_pn106.sh']

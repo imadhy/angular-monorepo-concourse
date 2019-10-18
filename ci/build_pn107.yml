@@ -9,8 +9,8 @@ inputs:
   - name: mars-monorepo
 
 outputs:
-  - name: livrable
+  - name: livrable_pn107
 
 run:
   path: /bin/sh
-  args: ['angular-monorepo-concourse/ci/build.sh']
+  args: ['angular-monorepo-concourse/ci/build_pn107.sh']

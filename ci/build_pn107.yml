@@ -7,6 +7,8 @@ image_resource:
 
 inputs:
   - name: angular-monorepo-concourse
+  - name: npm-cache
+    path: /cache
 
 outputs:
   - name: livrable_pn107

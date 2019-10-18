@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Node Version: $(node --version)"
 echo "NPM Version: $(npm --version)"
+cp -R cache/node_modules angular-monorepo-concourse
 cd angular-monorepo-concourse
-npm install
 npm run build -- --project=pn107
 cp -R dist ../livrable_pn107/

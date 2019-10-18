@@ -12,7 +12,14 @@ jobs:
       - task: test
         params: { NG_CLI_ANALYTICS: 'ci' }
         file: angular-monorepo-concourse/ci/test.yml
-  - name: build
+  - name: build-pn106
+    plan:
+      - get: mars-monorepo
+        trigger: true
+        passed: [unit-test]
+      # - task: run build
+      #   file: angular-monorepo-concourse/ci/build.yml
+  - name: build-pn107
     plan:
       - get: mars-monorepo
         trigger: true

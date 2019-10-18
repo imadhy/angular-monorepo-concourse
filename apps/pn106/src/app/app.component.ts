@@ -7,6 +7,7 @@ import { Todo } from '@monorepo-project/data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  title = 'pn106';
   todos: Todo[] = [{ title: 'Todo1' }, { title: 'Todo 2' }];
 
   ngOnInit() {}

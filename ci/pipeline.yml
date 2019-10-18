@@ -17,11 +17,11 @@ jobs:
         trigger: true
         passed: [unit-test]
       - task: run build
-        file: angular-monorepo-concourse/ci/build_106.yml
+        file: angular-monorepo-concourse/ci/build_pn106.yml
   - name: build-pn107
     plan:
       - get: angular-monorepo-concourse
         trigger: true
         passed: [unit-test]
       - task: run build
-        file: angular-monorepo-concourse/ci/build_107.yml
+        file: angular-monorepo-concourse/ci/build_pn107.yml

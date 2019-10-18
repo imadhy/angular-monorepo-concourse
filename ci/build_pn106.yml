@@ -6,11 +6,11 @@ image_resource:
   source: { repository: node, tag: '10' }
 
 inputs:
-  - name: mars-monorepo
+  - name: angular-monorepo-concourse
 
 outputs:
   - name: livrable_pn106
 
 run:
   path: /bin/sh
-  args: ['mars-monorepo/ci/build_pn106.sh']
+  args: ['angular-monorepo-concourse/ci/build_pn106.sh']

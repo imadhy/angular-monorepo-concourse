@@ -1,27 +1,27 @@
 ---
 resources:
-  - name: mars-monorepo
+  - name: angular-monorepo-concourse
     type: git
     source: { uri: 'https://github.com/imadhy/angular-monorepo-concourse.git' }
 
 jobs:
   - name: unit-test
     plan:
-      - get: mars-monorepo
+      - get: angular-monorepo-concourse
         trigger: true
       - task: test
-        file: mars-monorepo/ci/test.yml
+        file: angular-monorepo-concourse/ci/test.yml
   - name: build-pn106
     plan:
-      - get: mars-monorepo
+      - get: angular-monorepo-concourse
         trigger: true
         passed: [unit-test]
       - task: run build
-        file: mars-monorepo/ci/build_106.yml
+        file: angular-monorepo-concourse/ci/build_106.yml
   - name: build-pn107
     plan:
-      - get: mars-monorepo
+      - get: angular-monorepo-concourse
         trigger: true
         passed: [unit-test]
       - task: run build
-        file: mars-monorepo/ci/build_107.yml
+        file: angular-monorepo-concourse/ci/build_107.yml

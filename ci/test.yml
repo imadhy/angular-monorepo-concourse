@@ -6,8 +6,8 @@ image_resource:
   source: { repository: node, tag: '10' }
 
 inputs:
-  - name: mars-monorepo
+  - name: angular-monorepo-concourse
 
 run:
   path: /bin/sh
-  args: ['mars-monorepo/ci/test.sh']
+  args: ['angular-monorepo-concourse/ci/test.sh']

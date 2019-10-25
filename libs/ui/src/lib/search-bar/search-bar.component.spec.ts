@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { SearchBarComponent } from './search-bar.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
@@ -11,6 +13,7 @@ describe('SearchBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule, HttpClientTestingModule],
       declarations: [ SearchBarComponent ]
     })
     .compileComponents();

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Todo } from '@monorepo-project/data';
 
 @Component({
   selector: 'monorepo-project-root',
@@ -8,5 +7,4 @@ import { Todo } from '@monorepo-project/data';
 })
 export class AppComponent {
   title = 'pn107';
-  todos: Todo[] = [{ title: 'Todo10' }, { title: 'Todo 11' }];
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from '@monorepo-project/data';
+import { MovieSearch, Movie } from '@monorepo-project/data';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'monorepo-project-root',
@@ -7,14 +8,16 @@ import { Todo } from '@monorepo-project/data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'pn106';
-  todos: Todo[] = [{ title: 'Todo1' }, { title: 'Todo 2' }];
+  moviesResult$: Observable<MovieSearch[]>;
+  selectedMovie$: Observable<Movie>;
 
   ngOnInit() {}
 
-  addTodo() {
-    this.todos.push({
-      title: `New todo ${Math.floor(Math.random() * 1000)} !`
-    });
+  moviesResult(qResult$: Observable<MovieSearch[]>) {
+    this.moviesResult$ = qResult$;
+  }
+
+  setMovie(e: Observable<Movie>) {
+    this.selectedMovie$ = e;
   }
 }

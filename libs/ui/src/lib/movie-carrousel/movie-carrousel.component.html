@@ -1,0 +1,6 @@
+<div class="movie-carrousel">
+  <ng-container *ngFor="let movie of listOfMovies">
+    <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" 
+    (click)="selectElement(movie)" />
+  </ng-container>
+</div>

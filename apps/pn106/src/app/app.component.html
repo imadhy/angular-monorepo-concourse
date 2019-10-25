@@ -1,5 +1,20 @@
-<h1>Welcome to pn106!</h1>
+<monorepo-project-search-bar
+  (moviesResult)="moviesResult($event)"
+></monorepo-project-search-bar>
 
-<monorepo-project-todos [todos]="todos"></monorepo-project-todos>
+<!-- <monorepo-project-movie-carrousel
+*ngIf="moviesResult$ | async as movies"
+  [listOfMovies]="movies"
+  (selectedElement)="setMovie($event)"
+></monorepo-project-movie-carrousel> -->
 
-<button id="add-todo" (click)="addTodo()">Add Todo</button>
+<monorepo-project-movie-carrousel
+  *ngIf="moviesResult$ | async as movies" 
+  [listOfMovies]="movies"
+  (selectedElement)="setMovie($event)"
+></monorepo-project-movie-carrousel>
+
+<monorepo-project-movie-details 
+  *ngIf="selectedMovie$ | async as movie" 
+  [movie]="movie" 
+></monorepo-project-movie-details>

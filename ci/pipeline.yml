@@ -10,19 +10,8 @@ resources:
   - name: angular-monorepo-concourse
     type: git
     source: &source
-      uri: 'https://github.com/imadhy/angular-monorepo-concourse.git'
-      branch: master
-  - name: npm-cache
-    type: npm-cache
-    source:
-      <<: *source
-  - name: version
-    type: semver
-    source:
-      driver: git
       uri: git@github.com:imadhy/angular-monorepo-concourse.git
       branch: master
-      file: versionA
       private_key: |
         -----BEGIN OPENSSH PRIVATE KEY-----
         b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAACFwAAAAdzc2gtcn
@@ -73,10 +62,70 @@ resources:
         w0AH+6UqPbDEMDpVj/D2XtNQVPRz69R9f2JGMkh7SZk0OqbTw244NeHNqHdX84fGljpKmf
         EKI6N58QVqkAAAATaW1hZGh5Lmd0QGdtYWlsLmNvbQ==
         -----END OPENSSH PRIVATE KEY-----
+  - name: npm-cache
+    type: npm-cache
+    source:
+      <<: *source
+  - name: version
+    type: semver
+    source:
+      driver: git
+      uri: git@github.com:imadhy/angular-monorepo-concourse.git
+      branch: master
       username: "Imad El Hitti"
       git_user: "imadhy.gt@gmail.com"
-      file: "package.json"
+      file: version
       commit_message: "ci(concourse): montée de version %version%"
+      private_key: |
+        -----BEGIN OPENSSH PRIVATE KEY-----
+        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
+        -----END OPENSSH PRIVATE KEY-----
 
 jobs:
   - name: cache
@@ -116,8 +165,8 @@ jobs:
       - get: angular-monorepo-concourse
         trigger: true
         # passed: [unit-test]
-      - get: version
-        params: {bump: minor}
+      - put: version
+        params: {bump: patch}
       - task: display-version
         file: angular-monorepo-concourse/ci/release_pn106.yml
 

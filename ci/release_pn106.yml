@@ -1,9 +1,9 @@
 ---
 platform: linux
 
-# image_resource:
-#   type: registry-image
-#   source: { repository: node, tag: '10' }
+image_resource:
+  type: registry-image
+  source: { repository: node, tag: '10' }
 
 inputs:
   - name: angular-monorepo-concourse

@@ -1,2 +1,3 @@
 #!/bin/sh
-cat version/number
+# npm version patch -m "ci(concourse): montée de version %s"
+npm version patch

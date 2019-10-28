@@ -73,7 +73,10 @@ resources:
         w0AH+6UqPbDEMDpVj/D2XtNQVPRz69R9f2JGMkh7SZk0OqbTw244NeHNqHdX84fGljpKmf
         EKI6N58QVqkAAAATaW1hZGh5Lmd0QGdtYWlsLmNvbQ==
         -----END OPENSSH PRIVATE KEY-----
-      commit_message: 'ci(concourse): montée de version %version%'
+      username: "Imad El Hitti"
+      git_user: "imadhy.gt@gmail.com"
+      file: "package.json"
+      commit_message: "ci(concourse): montée de version %version%"
 
 jobs:
   - name: cache
@@ -112,7 +115,7 @@ jobs:
     plan:
       - get: angular-monorepo-concourse
         trigger: true
-        passed: [unit-test]
+        # passed: [unit-test]
       - get: version
         params: {bump: minor}
       - task: display-version

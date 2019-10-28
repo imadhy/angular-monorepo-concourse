@@ -110,6 +110,9 @@ jobs:
         file: angular-monorepo-concourse/ci/build_pn107.yml
   - name: display-version
     plan:
+      - get: angular-monorepo-concourse
+        trigger: true
+        passed: [unit-test]
       - get: version
         params: {bump: minor}
       - task: display-version

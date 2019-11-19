@@ -10,7 +10,7 @@ resources:
   - name: angular-monorepo-concourse
     type: git
     source: &source
-      uri: git@github.com:imadhy/angular-monorepo-concourse.git
+      uri: 'https://github.com/imadhy/angular-monorepo-concourse.git'
       branch: master
   - name: npm-cache
     type: npm-cache

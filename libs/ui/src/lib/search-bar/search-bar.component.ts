@@ -10,7 +10,6 @@ import { OmdbService } from '../omdb.service';
 })
 export class SearchBarComponent implements OnInit {
   @Input() searchType: SearchType.M | SearchType.S = SearchType.M;
-  // @Output() moviesResult: Observable<MovieSearch[]>;
   @Output() moviesResult = new EventEmitter<Observable<MovieSearch[]>>();
 
   q: string; // Query

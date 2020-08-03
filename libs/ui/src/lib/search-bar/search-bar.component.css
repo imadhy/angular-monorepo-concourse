@@ -12,7 +12,8 @@
   height: 60px;
   background-color: #353b48;
   border-radius: 30px;
-  padding: 10px;
+  padding: 7px;
+  border: 3px solid #db000085;
 }
 
 .search_input {
@@ -27,7 +28,7 @@
   transition: width 0.4s linear;
 }
 
-.searchbar >.search_icon {
+.searchbar > .search_icon {
   height: 40px;
   width: 40px;
   float: right;
